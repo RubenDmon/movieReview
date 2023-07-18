@@ -1,0 +1,103 @@
+:root{
+    --fontLumanosimo: 'Lumanosimo', cursive;
+    --fontLilita: 'Lilita One', cursive;
+    --fontRoboto: 'Roboto Condensed', sans-serif;
+    --fontVT323: 'VT323', monospace;
+
+    --paleYellow:#FFFFCC;
+    --fucsia:#FF3366;
+    --darkPink:#CC3366	;
+    --paleBlue:#99FFFF;
+    --beish:#F9EBEA;
+    --lightGray:#D5D8DC;
+    --almostWhite:#FBFCFC ;
+    --purple:#4A235A;
+    --prettypaleBlue:#EAF2F8;
+    --gray:#515151;
+}
+body > * , body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--almostWhite);
+    /* overflow: hidden; */
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5rem;
+}
+.content h1{
+    margin-top: 0;
+    font-family: var(--fontLumanosimo);
+    font-size: clamp(48px, 3vw, 64px);
+    color: var(--purple);
+    width: 100vw;
+    text-align: center;
+    background-color: var(--beish);
+    height: 8rem;
+}
+.content ul a{
+    text-decoration: none;
+    color: var(--darkPink);
+    text-shadow: 1px 1px 2px var(--gray);
+    transition: all 0.2s ease-in-out;
+}
+.content ul a:hover{
+    text-decoration: none;
+    color: var(--fucsia);
+    text-shadow: 1px 1px 2px var(--gray);
+}
+.content ul a li{
+    list-style: none;
+    font-family: var(--fontLilita);
+    font-size: clamp(48px, 3vw, 64px);
+}
+.content button{
+    width: 15rem;
+    background-color: var(--purple);
+    font-family: var(--fontRoboto);
+    color:var(--almostWhite);
+    font-size: clamp(16px, 3vw, 32px);
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    height: 3.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    animation:point 0.5s ease 3;
+}
+.content button:hover{
+    filter: brightness(1.5);
+}
+
+
+footer{
+    font-family: var(--fontVT323);
+    margin-top: 5rem;
+    background-color: #006699;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+footer p a{
+    text-decoration: none;
+    color: var(--almostWhite);
+}
+footer p{
+    margin: 0;
+    color: var(--almostWhite);
+}
+@keyframes point {
+    0% {
+      transform: translate(0rem);
+    }
+    50% {
+      transform: translate(1rem);
+    }
+    100% {
+      transform: translate(0rem);
+    }
+  }
