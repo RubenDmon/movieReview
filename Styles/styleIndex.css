@@ -4,12 +4,9 @@
     --fontRoboto: 'Roboto Condensed', sans-serif;
     --fontVT323: 'VT323', monospace;
 
-    --paleYellow:#FFFFCC;
     --fucsia:#FF3366;
     --darkPink:#CC3366	;
     --paleBlue:#99FFFF;
-    --beish:#F9EBEA;
-    --lightGray:#D5D8DC;
     --almostWhite:#FBFCFC ;
     --purple:#4A235A;
     --prettypaleBlue:#EAF2F8;
@@ -20,10 +17,13 @@ body > * , body{
     padding: 0;
     box-sizing: border-box;
     background-color: var(--almostWhite);
+    position: relative;
     /* overflow: hidden; */
+    overflow-x: hidden;
+    padding-bottom: 2rem;
 }
 #logo{
-    width: 20vmax;
+    width: 15vmax;
     height: fit-content;
     /* animation: rebote 0.5s 3; */
 }
@@ -35,9 +35,9 @@ header{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-image: linear-gradient(#F9EBEA,#D5D8DC);
+    background-color: var(--prettypaleBlue);
     width: 100vw;
-    height: 15vmax;
+    height: 10vmax;
 
 }
 .rightHeader{
@@ -47,36 +47,14 @@ header{
     flex-direction: row;
 }
 .navBarLinks{
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    list-style-type: none;
-    gap:1rem;
-    font-size: clamp(16px, 3vw, 24px); */
-    /* font-size: 0.6rem; */
     display: none;
 }
 .navBarLinks a{
-    /* text-decoration: none;
-    font-family: var(--fontLumanosimo);
-    color: var(--blue);
-    text-shadow: 2px 2px 5px #E74C3C; */
     display: none;
-
 }
 
 .leftHeader .boton{
-    /* background-color: var(--midlered);
-    border: 3px solid #E74C3C;
-    border-radius: 2rem;
-    font-family: var(--fontLumanosimo);
-    color: var(--paleRed);
-    height: 1.5rem;
-    width: 12vmax;
-    font-size: 0.5rem; */
     display: none;
-
 }
 
 /* tres lineas */
@@ -88,40 +66,29 @@ header{
     gap:0.4rem;
     margin-right: 5vmax;
     background-color: var(--purple);
-    padding: 0.6rem;
-    border-radius: 1.2rem;
-    width: 5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 3rem;
     transition: all 0.5s ease-in-out;
 }
 .options .line{
-    width: 4rem;
-    height: 0.8rem;
-    background-image: linear-gradient(#F9EBEA,#D5D8DC);
+    width: 3rem;
+    height: 0.5rem;
+    background-color: var(--prettypaleBlue);
 }
 
 main{
-    /* display: grid;
-    overflow: hidden;
-    justify-content: center; 
-    align-content: center; */
-    /* grid-template-columns: 100vw;
-    grid-gap: 20px; */
-    /* grid-gap: 0.5rem; */
-    /* grid-auto-rows: 20rem;
-    grid-template-columns: repeat(auto-fill,minmax(100vw,1fr)) ; */
     display: flex;
     justify-content: center;
     align-self: center;
     flex-direction: column;
-   
-
+    overflow: hidden;
 }
 main .head{
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 2rem; */
     width: 100%;
     height: 50vh;
     position: relative;
@@ -135,36 +102,31 @@ main .head h2{
     z-index: 1;
     position: absolute;
     color: var(--purple);
-    text-shadow: 1px 1px 3px var(--fucsia);
+    text-shadow: 0.3px 0.3px 0.7px var(--fucsia);
     width: 100%;
     text-align: center;
-    /* border: 1px solid #006699;
-    border-color: #006699; */
     background-color: var(--almostWhite);
     font-size: clamp(30px, 3vw, 38px);
     font-family: var(--fontLilita);
-
 }
 main .content{
     display: grid;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    gap: 0.5rem;
-    grid-auto-rows: 32rem;
-    width: 85vw;
-    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr)) ;
-    margin-left: 2rem;
+    /* overflow: hidden; */
+    grid-auto-rows: 30rem;
+    width: 85%;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)) ;
+    margin-left: 12vw;
+    gap:1.5rem;
 }
 main .content .card{
-    /* margin-top: 4rem; */
-    /* margin: 1rem; */
-    width: 100%;
-    overflow: hidden;
-    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    overflow: hidden;
+    height: 100%;
     background: var(--prettypaleBlue);
     box-shadow: 1px 0px 5px #000000;
     transition: all 0.3s ease-in-out;
@@ -180,10 +142,7 @@ main .content .card .rango{
     color: var(--purple);
 }
 main .content a{
-    /* margin-top: 4rem; */
-    /* margin: 1rem; */
     width: 80%;
-    /* overflow: hidden; */
     height: fit-content;
     text-decoration: none;
 
@@ -195,7 +154,7 @@ main .content .card H3{
     font-size: clamp(30px, 3vw, 35px);
     font-family:var(--fontLilita);
     color: var(--purple);
-    text-shadow: 1px 1px 3px var(--fucsia);
+    text-shadow: 0.3px 0.3px 1px var(--fucsia);
 } 
 main .content .card .info{
     display:flex;
@@ -231,6 +190,7 @@ input[type="range"] {
 main .direcciones{
     margin-left: 3rem;
     font-family: var(--fontRoboto);
+    font-size: clamp(15px, 3vw, 20px);
     color: var(--purple);
 }
 
@@ -251,6 +211,10 @@ footer{
     justify-content: center;
     align-items: center;
     height: 4rem;
+    position: absolute;
+    top:100%;
+    width: 100vw;
+    padding: 1rem;
 }
 footer p a{
     text-decoration: none;
@@ -263,12 +227,12 @@ footer p{
 
 @media (width>980px) {
     #logo{
-        width: 6rem;
+        width: 5vmax;
+        margin-left: 2vmax;
     }
     .navBar{
-        height: 5rem;
+        height: 3.5vmax;
     }
-    /* tres lineas */
     .rightHeader{
         display: flex;
         align-items: center;
@@ -283,8 +247,8 @@ footer p{
         flex-direction: row;
         list-style-type: none;
         gap:4rem;
-        font-size: clamp(16px, 3vw, 24px);
-
+        font-size: clamp(0.5vmax, 3vw, 1.5vmax);
+        margin-left: 3.5vmax;
     }
     .navBarLinks a{
         text-decoration: none;
@@ -293,14 +257,11 @@ footer p{
         text-shadow: 1px 0px 2px #ffffff;
         display: block;
         transition: all 0.3s ease-in-out ;
-    
     }
     .leftHeader .navBoton a{
         text-decoration: none;
         color: var(--almostWhite);
-        
     }
-    
     .leftHeader .boton{
         display: block;
         background-color: var(--darkPink);
@@ -308,10 +269,10 @@ footer p{
         border-radius: 1rem;
         font-family: var(--fontLumanosimo);
         color: var(--paleRed);
-        height: 2.5rem;
-        width: 10rem;
-        font-size: 1rem;
-        margin-right: 4rem;
+        height: 2.5vmax;
+        width: 10vmax;
+        font-size: 1vmax;
+        margin-right: 4vmax;
         cursor: pointer;
         transition:all 0.5s ease-in-out ;
     }
@@ -329,34 +290,29 @@ footer p{
         animation: rotateDesktop 0.5s 3;
     }
     main .head img{
-        height: 60vh;    
+        height: 65vh;    
     }
     main .head h2{
-        text-shadow: 1px 1px 3px var(--paleBlue);
+        text-shadow: 0.3px 0.3px 1px var(--paleBlue);
     }
     main .content{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        gap: 0.5rem;
+        margin-top: 4rem;
+        gap: 1.8rem;
         grid-auto-rows: 32rem;
-        width: calc(85vw - 35rem);
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)) ;
-        margin-left: 35rem;
+        width: calc(85vw - 38vmax);
+        margin-left: 38vmax;
     }
     main .content .card H3{
-        text-shadow: 1px 1px 3px var(--paleBlue);
+        text-shadow: 0.3px 0.3px 1px var(--paleBlue);
     } 
     main .direcciones{
-
         position: absolute;
         left:10%;
-        top:100%;
+        top:80vh;
     }
     footer{
         background-color: #0098e4;
-        height: 6rem;
+        height: 3rem;
     }
     .leftHeader .boton:hover{
         filter: brightness(1.2);
@@ -387,17 +343,6 @@ main .direcciones ul a:hover{
 main .content .card:hover{
     scale:1.05;
 }
-/* @keyframes rebote {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  } */
   @keyframes rotate {
     0% {
       transform: rotate(0deg);
@@ -409,5 +354,3 @@ main .content .card:hover{
       transform: rotate(0deg);
     }
   }
-
-

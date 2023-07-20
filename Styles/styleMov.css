@@ -3,13 +3,9 @@
     --fontLilita: 'Lilita One', cursive;
     --fontRoboto: 'Roboto Condensed', sans-serif;
     --fontVT323: 'VT323', monospace;
-
-    --paleYellow:#FFFFCC;
     --fucsia:#FF3366;
     --darkPink:#CC3366	;
     --paleBlue:#99FFFF;
-    --beish:#F9EBEA;
-    --lightGray:#D5D8DC;
     --almostWhite:#FBFCFC ;
     --purple:#4A235A;
     --prettypaleBlue:#EAF2F8;
@@ -20,10 +16,13 @@ body > * , body{
     padding: 0;
     box-sizing: border-box;
     background-color: var(--almostWhite);
+    position: relative;
     /* overflow: hidden; */
+    overflow-x: hidden;
+    padding-bottom: 2rem;
 }
 #logo{
-    width: 20vmax;
+    width: 15vmax;
     height: fit-content;
     /* animation: rebote 0.5s 3; */
 }
@@ -35,10 +34,9 @@ header{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-image: linear-gradient(#F9EBEA,#D5D8DC);
+    background-color: var(--prettypaleBlue);
     width: 100vw;
-    height: 15vmax;
-    margin-bottom: 4rem;
+    height: 10vmax;
 
 }
 .rightHeader{
@@ -48,36 +46,14 @@ header{
     flex-direction: row;
 }
 .navBarLinks{
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    list-style-type: none;
-    gap:1rem;
-    font-size: clamp(16px, 3vw, 24px); */
-    /* font-size: 0.6rem; */
     display: none;
 }
 .navBarLinks a{
-    /* text-decoration: none;
-    font-family: var(--fontLumanosimo);
-    color: var(--blue);
-    text-shadow: 2px 2px 5px #E74C3C; */
     display: none;
-
 }
 
 .leftHeader .boton{
-    /* background-color: var(--midlered);
-    border: 3px solid #E74C3C;
-    border-radius: 2rem;
-    font-family: var(--fontLumanosimo);
-    color: var(--paleRed);
-    height: 1.5rem;
-    width: 12vmax;
-    font-size: 0.5rem; */
     display: none;
-
 }
 
 /* tres lineas */
@@ -89,37 +65,34 @@ header{
     gap:0.4rem;
     margin-right: 5vmax;
     background-color: var(--purple);
-    padding: 0.6rem;
-    border-radius: 1.2rem;
-    width: 5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 3rem;
     transition: all 0.5s ease-in-out;
 }
 .options .line{
-    width: 4rem;
-    height: 0.8rem;
-    background-image: linear-gradient(#F9EBEA,#D5D8DC);
+    width: 3rem;
+    height: 0.5rem;
+    background-color: var(--prettypaleBlue);
 }
 
 main .content{
     display: grid;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     gap: 0.5rem;
     grid-auto-rows: 35rem;
     width: 85vw;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)) ;
-    margin-left: 2rem;
+    padding: 2rem;
 }
 main .content .card{
-    /* margin-top: 4rem; */
-    /* margin: 1rem; */
-    width: 100%;
-    overflow: hidden;
-    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
     background: var(--prettypaleBlue);
     box-shadow: 1px 0px 5px #000000;
     transition: all 0.3s ease-in-out;
@@ -138,13 +111,9 @@ main .content .card .rango{
     color: var(--purple);
 }
 main .content a{
-    /* margin-top: 4rem; */
-    /* margin: 1rem; */
     width: 80%;
-    /* overflow: hidden; */
     height: fit-content;
     text-decoration: none;
-
 }
 main .content .card img{
     width: 100%;
@@ -186,9 +155,11 @@ input[type="range"] {
     border-bottom: 8px solid transparent;
   }
   
+
 main .direcciones{
     margin-left: 3rem;
     font-family: var(--fontRoboto);
+    font-size: clamp(15px, 3vw, 20px);
     color: var(--purple);
 }
 
@@ -209,6 +180,10 @@ footer{
     justify-content: center;
     align-items: center;
     height: 4rem;
+    position: absolute;
+    top:100%;
+    width: 100vw;
+    padding: 1rem;
 }
 footer p a{
     text-decoration: none;
@@ -220,12 +195,12 @@ footer p{
 }
 @media (width>980px) {
     #logo{
-        width: 6rem;
+        width: 5vmax;
+        margin-left: 2vmax;
     }
     .navBar{
-        height: 5rem;
+        height: 3.5vmax;
     }
-    /* tres lineas */
     .rightHeader{
         display: flex;
         align-items: center;
@@ -240,8 +215,8 @@ footer p{
         flex-direction: row;
         list-style-type: none;
         gap:4rem;
-        font-size: clamp(16px, 3vw, 24px);
-
+        font-size: clamp(0.5vmax, 3vw, 1.5vmax);
+        margin-left: 3.5vmax;
     }
     .navBarLinks a{
         text-decoration: none;
@@ -250,14 +225,11 @@ footer p{
         text-shadow: 1px 0px 2px #ffffff;
         display: block;
         transition: all 0.3s ease-in-out ;
-    
     }
     .leftHeader .navBoton a{
         text-decoration: none;
         color: var(--almostWhite);
-        
     }
-    
     .leftHeader .boton{
         display: block;
         background-color: var(--darkPink);
@@ -265,10 +237,10 @@ footer p{
         border-radius: 1rem;
         font-family: var(--fontLumanosimo);
         color: var(--paleRed);
-        height: 2.5rem;
-        width: 10rem;
-        font-size: 1rem;
-        margin-right: 4rem;
+        height: 2.5vmax;
+        width: 10vmax;
+        font-size: 1vmax;
+        margin-right: 4vmax;
         cursor: pointer;
         transition:all 0.5s ease-in-out ;
     }
@@ -290,8 +262,8 @@ footer p{
         display: grid;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-        gap: 0.5rem;
+        /* overflow: hidden; */
+        gap: 2.5rem;
         grid-auto-rows: 32rem;
         width: calc(85vw - 35rem);
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)) ;
