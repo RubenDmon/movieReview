@@ -17,6 +17,7 @@ body > * , body{
     background-color: var(--almostWhite);
     overflow-x: hidden;
     position: relative;
+    height: 100vh;
 }
 .content{
     display: flex;
@@ -34,6 +35,8 @@ body > * , body{
     text-align: center;
     background-color: var(--beish);
     padding: 1.5rem;
+    position: absolute;
+    top:0;
 }
 .content ul a{
     padding: 0.4rem;

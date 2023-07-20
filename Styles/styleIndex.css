@@ -213,7 +213,7 @@ footer{
     height: 4rem;
     position: absolute;
     top:100%;
-    width: 100vw;
+    width: 100%;
     padding: 1rem;
 }
 footer p a{
@@ -272,7 +272,7 @@ footer p{
         height: 2.5vmax;
         width: 10vmax;
         font-size: 1vmax;
-        margin-right: 4vmax;
+        margin-right: 10vmax;
         cursor: pointer;
         transition:all 0.5s ease-in-out ;
     }
