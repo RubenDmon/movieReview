@@ -113,16 +113,16 @@ header{
     transition: all 0.3s ease-in-out ;
 }
 .content img{
-    width: 70vw;
-    height: 40vh;
-    margin-block: 5rem;
+    width: 75vw;
+    height: 35vh;
+    margin-block: 3rem;
 }
 
 main h5{
-    width: 90vw;
+    width: 100vw;
     text-align: center;
     font-family: var(--fontLilita);
-    font-size: clamp(24px, 3vw, 40px);
+    font-size: clamp(18px, 3vw, 32px);
 }
 
 main .recomendaciones{
@@ -133,7 +133,7 @@ main .recomendaciones{
     grid-auto-rows: 22rem;
     width: 85%;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)) ;
-    margin-left: 10vw;
+    margin-left: 12vw;
 }
 main .recomendaciones .card{
     display: flex;
@@ -267,16 +267,31 @@ footer p{
     .navBarLinks a:hover{
         color: var(--fucsia);
     }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
+    }
     .content{
         flex-direction: row;
         background-color: var(--beish);
+        width: 80vw;       
+        padding: 1rem;
+        border-radius: 2rem;
+        box-shadow: 5px 5px 4px #000000;
+    }
+    .content .info{
+        margin-right: 6rem;
     }
     .content .info h1{
         font-size: clamp(16px, 3vw, 32px); 
     }
     .content .info p{
-        font-size: clamp(12px, 3vw, 20px); 
+        width: 20rem;
+        height: 5rem;
+        font-size: clamp(8px, 3vw, 16px); 
     }
     .content .info button{
         font-size: clamp(16px, 3vw, 32px);
@@ -288,7 +303,8 @@ footer p{
     }
     
     main h5{
-        font-size: clamp(28px, 3vw, 44px);
+        margin-top: 10rem;
+        font-size: clamp(8px, 3vw, 24px);
     }
     main .recomendaciones{
         display: grid;

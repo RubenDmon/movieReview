@@ -76,7 +76,12 @@ header{
     height: 0.5rem;
     background-color: var(--prettypaleBlue);
 }
-
+.main{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
 .mensaje h1{
     width: 90vw;
     text-align: center;
@@ -91,7 +96,7 @@ header{
     margin-inline: 2rem;
 }
 .formulario{     
-    width: 95vw;
+    width: 100vw;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -99,7 +104,7 @@ header{
     gap:1rem;
 }
 .formulario form{
-    width: 22rem;
+    width: 50vw;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -112,14 +117,14 @@ header{
 }
 .formulario form::after{
     content: url("../assets/message-regular.svg");
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
     background-color:var(--darkPink);
     position: absolute;
     top:-1rem;
     right: -1rem;
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
     transition: all 0.5s ease-in-out;
 }
 .formulario form label{
@@ -139,7 +144,7 @@ header{
     background-color: var(--fucsia);
 }
 .redes{
-    width: 95vw;
+    width: 100vw;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -165,10 +170,10 @@ header{
 }
 
 main h5{
-    width: 90vw;
+    width: 100vw;
     text-align: center;
     font-family: var(--fontLilita);
-    font-size: clamp(24px, 3vw, 40px);
+    font-size: clamp(12px, 3vw, 28px);
 }
 
 main .recomendaciones{
@@ -345,7 +350,7 @@ footer p{
         gap:2rem;
     }
     .formulario form{
-        width: 22rem;
+        width: 24rem;
         height: 100%;
     }
 
@@ -368,9 +373,9 @@ footer p{
         /* overflow: hidden; */
         gap: 0.5rem;
         grid-auto-rows: 22rem;
-        width: calc(85vw - 20vw);
+        width: calc(85vw - 25vw);
         grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)) ;
-        margin-left: 20vw;
+        margin-left: 25vw;
     }
  }
 
